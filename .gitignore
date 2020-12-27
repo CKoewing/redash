@@ -5,11 +5,12 @@ venv/
 .coveralls.yml
 .idea
 *.pyc
+.nyc_output
+coverage
 .coverage
 coverage.xml
 client/dist
 .DS_Store
-celerybeat-schedule*
 .#*
 \#*#
 *~
@@ -24,3 +25,5 @@ node_modules
 .sass-cache
 npm-debug.log
 
+client/cypress/screenshots
+client/cypress/videos

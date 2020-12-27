@@ -1,7 +1,9 @@
-#!/bin/env python
+#!/bin/env python3
+
 import sys
 import re
 import subprocess
+
 
 def get_change_log(previous_sha):
     args = ['git', '--no-pager', 'log', '--merges', '--grep', 'Merge pull request', '--pretty=format:"%h|%s|%b|%p"', 'master...{}'.format(previous_sha)]
@@ -32,4 +34,4 @@ if __name__ == '__main__':
     changes = get_change_log(previous_sha)
 
     for change in changes:
-        print change
+        print(change)
